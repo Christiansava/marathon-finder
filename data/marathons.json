@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Boston Marathon",
+    "city": "Boston",
+    "country": "United States",
+    "date": "2026-04-20",
+    "website": "https://www.baa.org"
+  },
+  {
+    "id": 2,
+    "name": "London Marathon",
+    "city": "London",
+    "country": "United Kingdom",
+    "date": "2026-04-26",
+    "website": "https://www.tcslondonmarathon.com"
+  },
+  {
+    "id": 3,
+    "name": "Berlin Marathon",
+    "city": "Berlin",
+    "country": "Germany",
+    "date": "2026-09-27",
+    "website": "https://www.bmw-berlin-marathon.com"
+  },
+  {
+    "id": 4,
+    "name": "Chicago Marathon",
+    "city": "Chicago",
+    "country": "United States",
+    "date": "2026-10-11",
+    "website": "https://www.chicagomarathon.com"
+  },
+  {
+    "id": 5,
+    "name": "New York City Marathon",
+    "city": "New York",
+    "country": "United States",
+    "date": "2026-11-01",
+    "website": "https://www.tcsnycmarathon.org"
+  },
+  {
+    "id": 6,
+    "name": "Tokyo Marathon",
+    "city": "Tokyo",
+    "country": "Japan",
+    "date": "2026-03-01",
+    "website": "https://www.marathon.tokyo"
+  },
+  {
+    "id": 7,
+    "name": "Paris Marathon",
+    "city": "Paris",
+    "country": "France",
+    "date": "2026-04-05",
+    "website": "https://www.schneiderelectricparismarathon.com"
+  },
+  {
+    "id": 8,
+    "name": "Athens Marathon",
+    "city": "Athens",
+    "country": "Greece",
+    "date": "2025-11-09",
+    "website": "https://www.athensauthenticmarathon.gr"
+  },
+  {
+    "id": 9,
+    "name": "Dubai Marathon",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "date": "2026-01-23",
+    "website": "https://www.dubaimarathon.org"
+  },
+  {
+    "id": 10,
+    "name": "Rotterdam Marathon",
+    "city": "Rotterdam",
+    "country": "Netherlands",
+    "date": "2026-04-12",
+    "website": "https://www.nnmarathonrotterdam.org"
+  }
+]
