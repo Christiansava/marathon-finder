@@ -1,5 +1,5 @@
 import { getUpcomingMarathonsSorted } from "@/lib/marathons";
-import { MarathonCard } from "@/components/MarathonCard";
+import { MarathonList } from "@/components/MarathonList";
 
 export default function Home() {
   const marathons = getUpcomingMarathonsSorted();
@@ -23,11 +23,7 @@ export default function Home() {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {marathons.map((marathon) => (
-              <MarathonCard key={marathon.id} marathon={marathon} />
-            ))}
-          </div>
+          <MarathonList marathons={marathons} />
         )}
 
         <footer className="mt-16 text-center text-gray-500 dark:text-gray-400 text-sm">
