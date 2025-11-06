@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Marathon } from "@/types/marathon";
 import { MarathonCard } from "./MarathonCard";
 import { LocationFilters } from "./LocationFilters";
@@ -14,9 +14,21 @@ export function MarathonList({ marathons }: MarathonListProps) {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
 
-  // Extract unique countries and cities from all marathons
+  // Extract unique countries from all marathons
   const countries = useMemo(() => getUniqueCountries(marathons), [marathons]);
-  const cities = useMemo(() => getUniqueCities(marathons), [marathons]);
+  
+  // Extract cities based on selected country (or all cities if no country selected)
+  const cities = useMemo(
+    () => getUniqueCities(marathons, selectedCountry || undefined),
+    [marathons, selectedCountry]
+  );
+
+  // Clear city selection if it's no longer available after country change
+  useEffect(() => {
+    if (selectedCity && !cities.includes(selectedCity)) {
+      setSelectedCity("");
+    }
+  }, [cities, selectedCity]);
 
   // Filter marathons based on selected country and city
   const filteredMarathons = useMemo(

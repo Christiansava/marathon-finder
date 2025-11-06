@@ -13,10 +13,14 @@ export function getUniqueCountries(marathons: Marathon[]): string[] {
 /**
  * Extracts unique cities from an array of marathons, sorted alphabetically.
  * @param marathons - Array of marathon objects
+ * @param country - Optional country to filter cities by
  * @returns Sorted array of unique city names
  */
-export function getUniqueCities(marathons: Marathon[]): string[] {
-  const cities = marathons.map((marathon) => marathon.city);
+export function getUniqueCities(marathons: Marathon[], country?: string): string[] {
+  const filteredMarathons = country 
+    ? marathons.filter((m) => m.country === country)
+    : marathons;
+  const cities = filteredMarathons.map((marathon) => marathon.city);
   return [...new Set(cities)].sort();
 }
 
